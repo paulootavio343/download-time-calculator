@@ -1,0 +1,92 @@
+.cookieConsentContainer {
+    z-index: 999;
+    width: 35rem;
+    min-height: 2rem;
+    box-sizing: border-box;
+    padding: 3rem;
+    background: var(--dark-theme);
+    border: 4px solid var(--tertiary-color);
+    border-radius: 2rem;
+    box-shadow: 0 0 2rem var(--tertiary-color);
+    overflow: hidden;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    display: none;
+}
+
+.cookieConsentContainer .cookieTitle p {
+    font-family: 'Open Sans', arial, sans-serif;
+    color: var(--white-color);
+    font-size: 2.6rem;
+    line-height: 2rem;
+    display: block;
+}
+
+.cookieConsentContainer .cookieDesc p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', arial, sans-serif;
+    color: var(--white-color);
+    font-size: 1.6rem;
+    line-height: 2rem;
+    display: block;
+    margin-top: 1rem;
+}
+
+.cookieConsentContainer .cookieDesc a {
+    font-family: 'Open Sans', arial, sans-serif;
+    color: var(--white-color);
+    text-decoration: underline;
+}
+.cookieConsentContainer .cookieDesc a:hover {
+    text-decoration: none;
+}
+
+.cookieConsentContainer .cookieButton button {
+    display: inline-block;
+    font-family: 'Open Sans', arial, sans-serif;
+    color: var(--white-color);
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-top: 1.4rem;
+    background: var(--tertiary-color);
+    box-sizing: border-box;
+    padding: 1.5rem 2.4rem;
+    text-align: center;
+    transition: 0.4s ease;
+    border: 0;
+    border-radius: 2rem;
+    outline: 0;
+}
+
+.cookieConsentContainer .cookieButton button:last-child {
+    background-color: var(--white-color);
+    color: var(--dark-theme);
+    margin-left: 0.5rem;
+}
+
+.cookieConsentContainer .cookieButton button:hover {
+    cursor: pointer;
+    transform: scale(1.08);
+}
+
+.cookieConsentContainer .cookieButton button:active {
+    transform: scale(0.92);
+}
+
+@media screen and (min-width: 1820px) {
+    .cookieConsentContainer {
+        width: 55rem;
+    }    
+}
+
+@media screen and (max-width: 520px) {
+    .cookieConsentContainer {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}

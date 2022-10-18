@@ -1,0 +1,248 @@
+:root {
+    --tertiary-color: #0074d3;
+    --white-color: #fcfaf5;
+    --dark-theme: #222a33;
+}
+
+@font-face {
+    font-family: 'Electrolize';
+    src: url('../fonts/Electrolize/Electrolize-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    /* Not supported by Safari < 15.4 */
+    background-color: var(--white-color);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+}
+
+#live-time {
+    font-family: 'Electrolize', sans-serif;
+    font-size: 5rem;
+}
+
+.space {
+    margin: 0 10rem;
+}
+
+.calculator {
+    background-color: var(--dark-theme);
+    color: var(--white-color);
+    padding: 5rem 0;
+    min-height: 100vh;
+}
+
+.page-title {
+    text-align: center;
+    padding-bottom: 4rem;
+    color: var(--white-color);
+}
+
+.form,
+.form label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: var(--white-color);
+}
+
+.form label input,
+.form label select,
+.form input[type="button"] {
+    width: 40rem;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    background-color: var(--white-color);
+    border: 3px solid var(--tertiary-color);
+    border-radius: 1rem;
+    font-size: inherit;
+    font-family: inherit;
+    outline: 0;
+    transition: 0.4s ease;
+}
+
+.form label input,
+.form label select {
+    border: 3px solid #343f4b;
+}
+
+#time {
+    padding: 1rem;
+}
+
+.form label input:focus,
+.form label select:focus,
+.form input[type="button"]:focus {
+    border: 3px solid var(--tertiary-color);
+    box-shadow: 0 0 2rem var(--tertiary-color);
+}
+
+.form input[type="button"] {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    background-color: var(--tertiary-color);
+    color: var(--white-color);
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.form input[type="button"]:hover {
+    box-shadow: 0 0 2rem var(--tertiary-color);
+}
+
+.form input[type="button"]:active {
+    transform: scale(0.92);
+}
+
+.form label input[name="time"] {
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--tertiary-color);
+    color: var(--white-color);
+}
+
+.footer p::selection,
+.footer a::selection {
+    background-color: var(--dark-theme);
+}
+
+.footer a {
+    color: var(--white-color);
+    text-decoration: underline;
+}
+
+.footer a:hover {
+    text-decoration: none;
+}
+
+.footer .footer-content-1 {
+    padding: 1.5rem 1rem 0.5rem 1rem;
+}
+
+.footer .footer-content-2 {
+    padding: 1.5rem 1rem;
+}
+
+.notification {
+    display: none;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    border-radius: 1rem;
+    padding: 2rem;
+    background-color: var(--tertiary-color);
+    color: var(--white-color);
+    box-shadow: 0 0 1rem var(--dark-theme);
+    transition: 0.4s ease;
+}
+
+.notification:hover {
+    box-shadow: 0 0 1rem var(--tertiary-color);
+}
+
+.notification.active {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.notification p::selection,
+.notification img::selection {
+    background-color: var(--dark-theme);
+}
+
+.notification-btn {
+    padding-left: 2rem;
+    background-color: transparent;
+    color: var(--white-color);
+    border: 0;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.notification-btn:active {
+    transform: scale(0.82);
+}
+
+.title {
+    text-align: center;
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 520px) {
+
+    .form label,
+    .form input[type="button"] {
+        width: 90%;
+    }
+
+    .form label input,
+    .form label select {
+        width: 100%;
+    }
+
+    .page-title h1,
+    .page-title p {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .space {
+        margin: 0;
+    }
+
+    .notification {
+        left: 2rem;
+    }
+}

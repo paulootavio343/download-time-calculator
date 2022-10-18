@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#222a33"> <!-- Chrome Android and Safari -->
+
+    <meta name="author" content="Author">
+    <meta name="description"
+        content="Website to calculate download and upload time based on file size and connection speed.">
+    <meta name="keywords" content="upload, download, calculator, speed, time, connection">
+    <title>Download Time Calculator - Calculate download and upload time</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/cookie-style.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Code -->
+    <script src="assets/js/service-worker-registration.js" type="text/javascript" defer></script>
+    <script src="assets/js/cookie-code.js" type="text/javascript" defer></script>
+    <script src="assets/js/live-time.js" type="text/javascript" defer></script>
+    <script src="assets/js/tempo-de-download.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+    <!-- Notifications -->
+    <div class="notification" id="notification">
+        <p id="notification-text">Notification.</p>
+        <button class="notification-btn" id="notification-btn">
+            <img src="assets/icons/close_black_24dp.svg" alt="Close notification" title="Close">
+        </button>
+    </div>
+
+    <main class="calculator">
+        <!-- Page title -->
+        <div class="page-title space">
+            <h1 id="live-time" translate="no">00:00</h1>
+            <p>
+                Calculate download and upload time
+            </p>
+        </div>
+
+        <!-- Form -->
+        <div class="form space">
+            <label for="file-measurement-unit">
+                File measurement unit
+
+                <select name="file-measurement-unit" id="file-measurement-unit">
+                    <option value="0.000001">Bytes</option>
+                    <option value="0.001">Kilobytes</option>
+                    <option value="1">Megabytes</option>
+                    <option value="1000">Gigabytes</option>
+                    <option value="1000000">Terabytes</option>
+                    <option value="1000000000">Petabytes</option>
+                </select>
+            </label>
+
+            <label for="file-size">
+                File size
+                <input type="number" name="file-size" placeholder="Ex: 50..." id="file-size">
+            </label>
+
+            <label for="internet-speed">
+                Connection speed in Mbps
+                <input type="number" step="10" name="internet-speed" placeholder="Ex: 100..." id="internet-speed">
+            </label>
+
+            <input type="button" class="btn" id="btn" value="Calculate">
+
+            <label for="time" id="label-for-time">
+                Estimated time:
+                <input type="text" name="time" readonly id="time">
+            </label>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div>
+            <div class="footer-content-2 space">
+                <p>
+                    Open Source Project on
+                    <a href="https://github.com/paulootavio343/download-time-calculator">GitHub</a>.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie consent -->
+    <div id="javascript-cookie-container">
+        <div class="cookieConsentContainer" id="cookieConsentContainer">
+            <div class="cookieTitle">
+                <p>Cookies</p>
+            </div>
+
+            <div class="cookieDesc">
+                <p>
+                    This site uses cookies to personalize your experience.
+                </p>
+            </div>
+
+            <div class="cookieButton">
+                <button class="accepted">Accept</button>
+                <button class="refused">Refuse</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
