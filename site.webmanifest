@@ -2,7 +2,7 @@
     "name": "Download Time Calculator",
     "short_name": "Download Time",
     "description": "Calculate download and upload time.",
-    "start_url": "https://download-time-calculator.netlify.app",
+    "start_url": "https://download-upload-time-calculator.netlify.app/",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
